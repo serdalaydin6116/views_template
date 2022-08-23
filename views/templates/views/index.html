@@ -1,0 +1,28 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'views/index.css' %} " />
+
+</head>
+
+<h1> This page is views app index page </h1>
+
+{{ request.user }}
+<br/>
+ {{ caption }} 
+{{ caption | title}}
+<br/>
+{{ caption | truncatechars:3}}
+<br/>
+<ul> 
+    {% for i in my_list %}
+    <li> {{ i }} </li>
+    {% endfor %}
+</ul>
+
+
+<img src="{%static 'views/cc1.jpg' %}" width='300', alt='Example' />
+
+{# this is DTL comment #}
+{% comment %}
+This is multiline comment
+{% endcomment %}
